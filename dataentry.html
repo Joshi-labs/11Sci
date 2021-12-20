@@ -42,7 +42,7 @@
 	  const analytics = getAnalytics(app);
 	  import {getDatabase, ref, set, child, update, remove} 
 	  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
-	  const db = getDatabase();"USR_LST/" + name + "/pin"
+	  const db = getDatabase();
 	  
       document.getElementById("submit").onclick = function(){
 	  const name = document.getElementById("name").value;console.log(name);
