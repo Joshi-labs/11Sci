@@ -13,19 +13,35 @@
 	if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 == null){
 		window.location.replace("index.html");
 	}
-	
+	localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_image_selected = "none";
 	</script>
+	<script src="medium-zoom.min.js"></script>
   </head>
   <body style="background-color: #5F4DEE">
 	<nav class="navbar navbar-dark fixed-bottom" style="background-color: #7464f0 ;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">	
 	
-  <div class="container-fluid d-inline-block d-flex " >
-  	  
-      <input type="text" class="form-control me-2" placeholder="Message" style="float: right !important;width: 65%;border-radius: 25px;" id="msg">
-	  <button class="btn btn-light" style="width: 15%;border-radius: 25px;margin-right:5px;"><i class="fas fa-file-image"></i></button>
-      <button class="btn btn-light" type="submit" style="float: right !important;width: 15%;border-radius: 25px;" id="send" ><i class="fas fa-paper-plane"></i></button>
+	<div class="container-fluid d-inline-block d-flex">
+		<div class="collapse w-100" id="media-send">
+			<div class="card card-body">
+				<div class="container" id="impdata">
+					<img src="selectv1.png" class="rounded mx-auto d-block img-fluid" id="selector">
+				</div>
+				<div class="container">
+					<hr>
+				</div>
+				<div class="d-grid">
+					<button class="btn btn-primary" id="resetimgbutton">Reset</button>
+				</div>
+				
+			</div></center>
+			<br>
+		</div>
 
-  </div>
+      <input type="text" class="form-control me-2" placeholder="Message" style="float: right !important;width: 65%;border-radius: 25px;margin-top:4px" id="msg">
+	  <button class="btn btn-light" style="width: 15%;border-radius: 25px;margin-right:5px;margin-top:4px" data-bs-toggle="collapse" data-bs-target="#media-send" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-file-image"></i></button>
+      <button class="btn btn-light" type="submit" style="float: right !important;width: 15%;border-radius: 25px;margin-top:4px" id="send"><i class="fas fa-paper-plane"></i></button>
+
+    </div>
 	</nav>
 	
 	
@@ -71,6 +87,21 @@
 	
 	<div class="container">
 		<div class="mt-4 p-5 rounded border border-dark" style="background-color: #FFFAFA ;" id="main-ChatBox">
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		</div>
 	</div>
@@ -112,6 +143,8 @@ $( document ).ready(function() {
 	
 	get(ref(db, "TTL_MN_CHT")).then((snapshot) => {mainfn(snapshot.val())});
 	const room = document.getElementById("main-ChatBox");
+	var filemaybe = "";
+	var filemaybe_type = "";
 	function mainfn(no_of_msg)
 	{
 		for (let i = 0; i < no_of_msg; i++) {
@@ -141,6 +174,15 @@ $( document ).ready(function() {
 	const txtBox = document.getElementById("msg");
 	document.getElementById("send").onclick = function()
 	{
+var isVisible = $('#media-send').is( ":visible" );
+		if(isVisible){
+			$('#media-send').collapse('hide');
+		}
+		
+		
+		
+		// no image/video
+		if(txtBox.value != "" && localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_image_selected=="none"){
 		get(ref(db, "TTL_MN_CHT")).then((snapshot) => 
 		{	if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 == "Vishwash"){
 				var massagetosend = "<b><b style='color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color+"'>"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"</b><b>></b> "+txtBox.value+"</b>";
@@ -153,10 +195,54 @@ $( document ).ready(function() {
 			set(ref(db,"MN_CHT/"+(snapshot.val()+1)+"/message"),(massagetosend));
 			set(ref(db,"TTL_MN_CHT/"),((snapshot.val()+1)));
 			txtBox.value = "";
+			getElementById("resetimgbutton").click();
 			$('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
-		});
-	};
-	
+		});}
+		//image/video
+		else if( localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_image_selected=="yup!"){
+		
+		if(filemaybe_type == "jpg"|| filemaybe_type == "png" || filemaybe_type == "jpeg" || filemaybe_type == "gif")
+		{
+		
+		
+			get(ref(db, "TTL_MN_CHT")).then((snapshot) => 
+			{	if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 == "Vishwash"){
+					var massagetosend = "<b><b style='color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color+"'>"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"</b><b>></b> "+txtBox.value+"</b><br><img src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid'>";
+				}
+				else{
+					var massagetosend = "<b><b style='color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color+"'>"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"</b><b>:-</b> "+txtBox.value+"</b><br><img src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid'>";
+				};
+				
+				set(ref(db,"MN_CHT/"+(snapshot.val()+1)+"/name"),(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2));
+				set(ref(db,"MN_CHT/"+(snapshot.val()+1)+"/message"),(massagetosend));
+				set(ref(db,"TTL_MN_CHT/"),((snapshot.val()+1)));
+				txtBox.value = "";
+				getElementById("resetimgbutton").click();
+				$('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+			})}
+		
+		
+		else if(filemaybe_type == "mp4"|| filemaybe_type == "avi")
+		{
+			console.log("donetillhere");
+			get(ref(db, "TTL_MN_CHT")).then((snapshot) => 
+			{	if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 == "Vishwash"){
+					var massagetosend = "<b><b style='color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color+"'>"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"</b><b>></b> "+txtBox.value+"</b><br><video src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid' controls>";
+				}
+				else{
+					var massagetosend = "<b><b style='color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color+"'>"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"</b><b>:-</b> "+txtBox.value+"</b><br><video src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid' controls>";
+				};
+
+				set(ref(db,"MN_CHT/"+(snapshot.val()+1)+"/name"),(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2));
+				set(ref(db,"MN_CHT/"+(snapshot.val()+1)+"/message"),(massagetosend));
+				set(ref(db,"TTL_MN_CHT/"),((snapshot.val()+1)));
+
+				txtBox.value = "";
+				$('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+			});
+		}
+	}
+	}
 	var xtemp = 0;
 	onValue(ref(db,"TTL_MN_CHT"), (snapshot) => {
 			xtemp = xtemp + 1;
@@ -188,9 +274,43 @@ $( document ).ready(function() {
 	document.getElementById("logout").onclick = function(){	localStorage.removeItem("UsEr_Name_MemEArIna_UsEr_ApS2");
 	window.location.replace("index.html");};
 
+	var input = document.createElement("input");
+	document.getElementById("impdata").onclick = function(){
+		input.setAttribute("type", "file");
+		input.setAttribute("accept", "video/mp4, image/jpeg, image/png");
+		input.click();
+		return false;
+	};
 	
 	
-      
+	
+	input.addEventListener("change", function(){
+			localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_image_selected = "yup!";
+			console.log(input.value)
+			const reader = new FileReader();
+			var new_file = "";
+			
+			reader.addEventListener("load", () => {
+				new_file = reader.result;
+				filemaybe = new_file;
+				filemaybe_type = input.value.slice(input.value.lastIndexOf('.')+1); 
+				if(filemaybe_type=="jpg" || filemaybe_type=="jpg"){
+					document.getElementById("impdata").innerHTML = "<img src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid'>"
+				}
+				else if(filemaybe_type=="mp4" || filemaybe_type=="avi" || f){
+					document.getElementById("impdata").innerHTML = "<video src='"+filemaybe+"' class='rounded mx-auto d-block img-fluid'>"
+				};
+				console.log(filemaybe);
+			})
+			
+			reader.readAsDataURL(this.files[0]);
+		});
+	
+	document.getElementById("resetimgbutton").onclick = function()
+	{
+		localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_image_selected = "none";
+		document.getElementById("selector").src = "selectv1.png";
+	}
 </script>
   </body>
 </html>
