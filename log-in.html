@@ -100,11 +100,20 @@
 		get(Ref).then((snapshot) => {
 		const data = snapshot.val();
 		Math.floor(Math.random() * 10);
-		if (data == pin){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 = name;console.log(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2);localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color= color[Math.floor(Math.random() * 10)];window.location.replace("main.html");} else{alert("Wrong Details")};
-
+		if (data == pin)
+		{localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 = name;console.log(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2);localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color= color[Math.floor(Math.random() * 10)];
+			const dRef = ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/gen");
+			get(dRef).then((snapshot) => {
+				const g = snapshot.val();
+				console.log();
+				if(g == "f"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/"+data[0]+".png")}
+				else if(g == "m"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/"+data[0]+".png")};
+			});
+			window.location.replace("main.html");
+		} 
+		else{alert("Wrong Details")};
 		});
 	}
 </script>
 </body>
-<!-- document.getElementById("1").onclick = function(){if(localStorage.signup_Name_MemeArina_User_Aps2 != "done"){ set(ref(db,"Request/1"),({name:"Vishwash"}));localStorage.signup_Name_MemeArina_User_Aps2 = "done";alert("Requested")}else{alert("You can request only once.")}}; 		console.log(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2);-->
 </html>
