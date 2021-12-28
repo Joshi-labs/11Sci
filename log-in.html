@@ -22,7 +22,7 @@
     </div>
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
-            <a class="navbar-brand logo-image" href="index.html" style="text-decoration:none !important"><h1 style="color:white !important;">XI Home Page</h1></a> 
+            <a class="navbar-brand logo-image" href="index.html" style="text-decoration:none !important"><h1 style="color:white !important;">XI Home Page</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
                 <span class="navbar-toggler-awesome fas fa-times"></span>
@@ -62,16 +62,16 @@
                     </div>
                 </div>
             </div>
-        </div> 
-    </header> 
+        </div>
+    </header>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script> 
-    <script src="js/swiper.min.js"></script> 
-    <script src="js/jquery.magnific-popup.js"></script> 
-    <script src="js/validator.min.js"></script> 
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/validator.min.js"></script>
     <script src="js/scripts.js"></script>
 <script type="module">
 	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
@@ -88,10 +88,10 @@
 	  };
 	  const app = initializeApp(firebaseConfig);
 	  const analytics = getAnalytics(app);
-	  import {getDatabase, ref, get} 
+	  import {getDatabase, ref, get}
 	  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 	  const db = getDatabase();
-	  
+
 	const color = ["#1974D2", "#D72A2B", "#643BC8", "orange", "#fe8a71", "fe8a71","#1974D2", "#D72A2B", "#643BC8"];
 	document.getElementById("submit").onclick = function() {
 		const name = document.getElementById("name").value;console.log(name);
@@ -106,11 +106,11 @@
 			get(dRef).then((snapshot) => {
 				const g = snapshot.val();
 				console.log();
-				if(g == "f"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/"+data[0]+".png")}
-				else if(g == "m"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/"+data[0]+".png")};
+				if(g == "f"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("DP/f/"+data[0]+".png")}
+				else if(g == "m"){localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = ("DP/m/"+data[0]+".png")};
 			});
 			window.location.replace("main.html");
-		} 
+		}
 		else{alert("Wrong Details")};
 		});
 	}
