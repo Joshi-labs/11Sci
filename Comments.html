@@ -44,7 +44,7 @@ textarea {
           <a class="nav-link" href="Profile.html"><b>Profile</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
-          <a class="nav-link" href="#"><b>Events</b></a>
+          <a class="nav-link" href="Events.html"><b>Events</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
           <a class="nav-link" id="logout"><b>Log Out</b></a>
@@ -892,6 +892,26 @@ textarea {
 
 	</div>
   </div>
+
+
+  <div class="modal fade" id="messagesentMain" tabindex="-1" aria-labelledby="messagesent" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="messagesent">Nice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Comment saved 👍
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script type="module">
 	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
@@ -956,7 +976,7 @@ textarea {
 		get(ref(db, "USR_LST/" + name + "/Looks")).then((lsnapshot) =>
 			{
 			var lnum = lsnapshot.val();
-			if(lnum == "0" || lnum == null){document.getElementById("looks-"+name).innerHTML = ("Looks : No Reviwes")}
+			if(lnum == "0" || lnum == null){document.getElementById("looks-"+name).innerHTML = ("Looks : No Review")}
 			else{
 				get(ref(db, "USR_LST/" + name + "/Looks_x")).then((lsnapshot) =>
 					{
@@ -968,7 +988,7 @@ textarea {
 		//Trust
 	  get(ref(db, "USR_LST/" + name + "/TrustWorthy")).then((tsnapshot) => {
 		var tnum = tsnapshot.val();
-		if(tnum == "0" || tnum == null){document.getElementById("trust-"+name).innerHTML = ("TrustWorthy : No Reviwes")}
+		if(tnum == "0" || tnum == null){document.getElementById("trust-"+name).innerHTML = ("TrustWorthy : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + name + "/TrustWorthy_x")).then((tsnapshot) =>
 				{
@@ -980,7 +1000,7 @@ textarea {
 	//Friend
 	  get(ref(db, "USR_LST/" + name + "/Friendly")).then((fsnapshot) => {
 		var fnum = fsnapshot.val();
-		if(fnum == "0" || fnum == null){document.getElementById("friend-"+name).innerHTML = ("Friendly : No Reviwes")}
+		if(fnum == "0" || fnum == null){document.getElementById("friend-"+name).innerHTML = ("Friendly : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + name + "/Friendly_x")).then((fsnapshot) =>
 				{
@@ -992,7 +1012,7 @@ textarea {
 	//Pet
 	  get(ref(db, "USR_LST/" + name + "/Teachers_pet")).then((psnapshot) => {
 		var pnum = psnapshot.val();
-		if(pnum == "0" || pnum == null){document.getElementById("pet-"+name).innerHTML = ("Teachers Pet : No Reviwes")}
+		if(pnum == "0" || pnum == null){document.getElementById("pet-"+name).innerHTML = ("Teachers Pet : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + name + "/Teachers_pet_x")).then((psnapshot) =>
 				{
@@ -1004,7 +1024,7 @@ textarea {
 	//Overall
 	  get(ref(db, "USR_LST/" + name + "/Overall")).then((osnapshot) => {
 		var onum = osnapshot.val();
-		if(onum == "0" || onum == null){document.getElementById("overall-"+name).innerHTML = ("Overall : No Reviwes")}
+		if(onum == "0" || onum == null){document.getElementById("overall-"+name).innerHTML = ("Overall : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + name + "/Overall_x")).then((osnapshot) =>
 				{
@@ -1022,6 +1042,8 @@ textarea {
 	function cmtsave(save_name)
 	{	if(document.getElementById("comments-"+save_name).value != ""){
 			set(ref(db,"USR_LST/"+save_name+"/cmts"),(document.getElementById("comments-"+save_name).value));
+      var myModal = new bootstrap.Modal(document.getElementById("messagesentMain"));
+      myModal.show()
 		}
 	}
 
