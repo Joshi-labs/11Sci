@@ -29,7 +29,7 @@
           <a class="nav-link active" aria-current="page" href="#"><b>Profile</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
-          <a class="nav-link" href="#"><b>Events</b></a>
+          <a class="nav-link" href="Events.html"><b>Events</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
           <a class="nav-link" id="logout"><b>Log Out</b></a>
@@ -70,6 +70,15 @@
 <div class="d-grid gap-2">
   <button class="btn btn-primary" type="button" id="Review"><b>Review Others Profiles</b></button><hr>
 </div>
+<hr><center><h3>Setting</h3></center><hr>
+<p><b> change color of name: <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Click here</a> select color and copy hex code(eg: #66ff33) and past it... or you can type basic colors like red blue etc.</b></p>
+<p><b id = "colorchangename"> - </b><input type="text" class="form-control" id="newcolor" placeholder="#66ff33 or orange"></input></p>
+<button class="btn btn-success" id="saveclr"><b>save</b></button><hr><hr>
+<p><b>Change <code>Pin></code></b></p>
+<input type="number" class="form-control" placeholder="Enter new pin" id="NewPin"></input><br>
+<div class="d-grid gap-2">
+  <button class="btn btn-danger" type="button" id="newpinsave"><b>Save</b></button>
+</div><hr>
 </div>
 
 </div>
@@ -89,7 +98,7 @@
 	  };
 	  const app = initializeApp(firebaseConfig);
 	  const analytics = getAnalytics(app);
-	  import {getDatabase, ref, get}
+	  import {getDatabase, ref, set, get}
 	  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 	  const db = getDatabase();
 	  const cRef = ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/cmts");
@@ -104,7 +113,7 @@
 	//looks
 	  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Looks")).then((lsnapshot) => {
 		var lnum = lsnapshot.val();
-		if(lnum == "0" || lnum == null){document.getElementById("looks").innerHTML = ("Looks : No Reviwes")}
+		if(lnum == "0" || lnum == null){document.getElementById("looks").innerHTML = ("Looks : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Looks_x")).then((lsnapshot) =>
 				{
@@ -116,7 +125,7 @@
 	//Trust
 	  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/TrustWorthy")).then((tsnapshot) => {
 		var tnum = tsnapshot.val();
-		if(tnum == "0" || tnum == null){document.getElementById("trust").innerHTML = ("TrustWorthy : No Reviwes")}
+		if(tnum == "0" || tnum == null){document.getElementById("trust").innerHTML = ("TrustWorthy : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/TrustWorthy_x")).then((tsnapshot) =>
 				{
@@ -128,7 +137,7 @@
 	//Friend
 	  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Friendly")).then((fsnapshot) => {
 		var fnum = fsnapshot.val();
-		if(fnum == "0" || fnum == null){document.getElementById("friend").innerHTML = ("Friendly : No Reviwes")}
+		if(fnum == "0" || fnum == null){document.getElementById("friend").innerHTML = ("Friendly : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Friendly_x")).then((fsnapshot) =>
 				{
@@ -140,7 +149,7 @@
 	//Pet
 	  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Teachers_pet")).then((psnapshot) => {
 		var pnum = psnapshot.val();
-		if(pnum == "0" || pnum == null){document.getElementById("pet").innerHTML = ("Teachers Pet : No Reviwes")}
+		if(pnum == "0" || pnum == null){document.getElementById("pet").innerHTML = ("Teachers Pet : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Teachers_pet_x")).then((psnapshot) =>
 				{
@@ -152,7 +161,7 @@
 	//Overall
 	  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Overall")).then((osnapshot) => {
 		var onum = osnapshot.val();
-		if(onum == "0" || onum == null){document.getElementById("overall").innerHTML = ("Overall : No Reviwes")}
+		if(onum == "0" || onum == null){document.getElementById("overall").innerHTML = ("Overall : No Review")}
 		else{
 			get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Overall_x")).then((osnapshot) =>
 				{
@@ -160,11 +169,21 @@
 				});
 			}
 		});
+    document.getElementById("newpinsave").onclick = function(){
+      set(ref(db,"USR_LST/"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+"/pin"),(document.getElementById("NewPin").value));
+    };
 
 	</script>
 	<script>
 		document.getElementById("pp").src = localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img;
 		document.getElementById("name").innerHTML = (localStorage.UsEr_Name_MemEArIna_UsEr_ApS2);
+    document.getElementById("colorchangename").innerHTML = (localStorage.UsEr_Name_MemEArIna_UsEr_ApS2+": ");
+    document.getElementById("colorchangename").style = ("color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color);
+    document.getElementById("saveclr").onclick = function(){
+      localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color = document.getElementById("newcolor").value;
+      document.getElementById("colorchangename").style = ("color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color);
+    };
+
 	</script>
   </body>
 </html>
