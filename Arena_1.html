@@ -255,5 +255,16 @@
 			}
 		});
 </script>
+<script>
+var countDownDate = new Date("Dec 30, 2021 21:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  if (distance > 0) {
+  clearInterval(x);
+    window.location.replace("Arena_wait.html");
+  }
+}, 1000);
+</script>
   </body>
 </html>
