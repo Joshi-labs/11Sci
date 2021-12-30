@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Rate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+      if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate == null){
+window.location.replace("Comments.html");
+      }
+      else{
+        console.log(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate);
+      };
+    </script>
+    <style>
+      .checked {
+  color: orange;
+}
+    </style>
+  </head>
+  <body style="background-color: #5F4DEE">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #7464f0 ;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; font-color:red !important">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1 style="color:white !important;">XI Home Page</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="main.html"><b>Community Chat</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Arena_main.html"><b>Arena</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Rate</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Profile.html"><b>Profile</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Events.html"><b>Events</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" id="logout"><b>Log Out</b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br>
+<div class="container">
+  <div class="mt-4 p-5 rounded" style="background-color: white">
+
+    <div class="card">
+      <div class="card-body">
+        <hr>
+          <center><h1 id="Mainname"></h1></center>
+        <hr>
+        <center><h6 id="looks">Looks : -</h6></center>
+        <div>
+          <center>
+            <span class="fa fa-star fa-2x" id="l1"></span>
+            <span class="fa fa-star fa-2x" id="l2"></span>
+            <span class="fa fa-star fa-2x" id="l3"></span>
+            <span class="fa fa-star fa-2x" id="l4"></span>
+            <span class="fa fa-star fa-2x" id="l5"></span>
+          </center>
+        </div>
+
+        <center><h6 id="trust">TrustWorthy : -</h6></center>
+        <div>
+          <center>
+            <span class="fa fa-star fa-2x" id="t1"></span>
+            <span class="fa fa-star fa-2x" id="t2"></span>
+            <span class="fa fa-star fa-2x" id="t3"></span>
+            <span class="fa fa-star fa-2x" id="t4"></span>
+            <span class="fa fa-star fa-2x" id="t5"></span>
+          </center>
+        </div>
+        <center><h6 id="friend">Friendly : -</h6></center>
+        <div>
+          <center>
+            <span class="fa fa-star fa-2x" id="f1"></span>
+            <span class="fa fa-star fa-2x" id="f2"></span>
+            <span class="fa fa-star fa-2x" id="f3"></span>
+            <span class="fa fa-star fa-2x" id="f4"></span>
+            <span class="fa fa-star fa-2x" id="f5"></span>
+          </center>
+        </div>
+        <center><h6 id="pet">Teachers Pet : -</h6></center>
+        <div>
+          <center>
+            <span class="fa fa-star fa-2x" id="p1"></span>
+            <span class="fa fa-star fa-2x" id="p2"></span>
+            <span class="fa fa-star fa-2x" id="p3"></span>
+            <span class="fa fa-star fa-2x" id="p4"></span>
+            <span class="fa fa-star fa-2x" id="p5"></span>
+          </center>
+        </div>
+        <center><h6 id="overall">Overall : -</h6></center>
+        <div>
+          <center>
+            <span class="fa fa-star fa-2x" id="o1"></span>
+            <span class="fa fa-star fa-2x" id="o2"></span>
+            <span class="fa fa-star fa-2x" id="o3"></span>
+            <span class="fa fa-star fa-2x" id="o4"></span>
+            <span class="fa fa-star fa-2x" id="o5"></span>
+          </center>
+        </div><hr>
+      <div class="d-grid gap-2"><button class="btn btn-danger" id="savefuck" data-bs-toggle="modal" data-bs-target="#saveexit"><b>Save</b></button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="saveexit" tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Label">Nice</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Data saved
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="changetab">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLhgz6eHJz1h75UCzJBLpKXG3ej0m8Hpc",
+  authDomain: "meme-arena-x.firebaseapp.com",
+  databaseURL: "https://meme-arena-x-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "meme-arena-x",
+  storageBucket: "meme-arena-x.appspot.com",
+  messagingSenderId: "1065864797805",
+  appId: "1:1065864797805:web:348583a22f09f1d2f5a964",
+  measurementId: "G-5QW7K75VEE"
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  import {getDatabase, ref, get, set, onValue}
+  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+  const db = getDatabase();
+  document.getElementById("logout").onclick = function()
+  {
+    	localStorage.removeItem("UsEr_Name_MemEArIna_UsEr_ApS2");
+      window.location.replace("index.html");
+  };
+  document.getElementById("changetab").onclick = function()
+  {
+    	localStorage.removeItem("UsEr_Name_MemEArIna_UsEr_ApS2_toRate");
+      window.location.replace("Comments.html");
+  };
+
+  var howmuch_looks_ed = 0;
+  var howmuch_trust_ed = 0;
+  var howmuch_pet_ed = 0;
+  var howmuch_friend_ed = 0;
+  var howmuch_overall_ed = 0;
+
+  document.getElementById("Mainname").innerHTML = localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate;
+  //Looks
+
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks")).then((lsnapshot) =>
+    {
+    var lnum = lsnapshot.val();
+    if(lnum == "0" || lnum == null){document.getElementById("looks").innerHTML = ("Looks : No Review")}
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks_x")).then((lsnapshot) =>
+        {
+          document.getElementById("looks").innerHTML = ("Looks : "+(lnum/lsnapshot.val()).toFixed(2)+"/5")
+        });
+      }
+    });
+  //Trust
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy")).then((tsnapshot) =>
+    {
+    var tnum = tsnapshot.val();
+    if(tnum == "0" || tnum == null){document.getElementById("trust").innerHTML = ("TrustWorthy : No Review")}
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy_x")).then((tsnapshot) =>
+        {
+        document.getElementById("trust").innerHTML = ("TrustWorthy : "+(tnum/tsnapshot.val()).toFixed(2)+"/5")
+        });
+      }
+    });
+
+  //Friend
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly")).then((fsnapshot) =>
+    {
+    var fnum = fsnapshot.val();
+    if(fnum == "0" || fnum == null){document.getElementById("friend").innerHTML = ("Friendly : No Review")}
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly_x")).then((fsnapshot) =>
+        {
+        document.getElementById("friend").innerHTML = ("Friendly : "+(fnum/fsnapshot.val()).toFixed(2)+"/5")
+        });
+      }
+    });
+
+  //Pet
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet")).then((psnapshot) => {
+    var pnum = psnapshot.val();
+    if(pnum == "0" || pnum == null){document.getElementById("pet").innerHTML = ("Teachers Pet : No Review")}
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet_x")).then((psnapshot) =>
+        {
+        document.getElementById("pet").innerHTML = ("Teachers Pet : "+(pnum/psnapshot.val()).toFixed(2)+"/5")
+        });
+      }
+    });
+
+  //Overall
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall")).then((osnapshot) =>{
+    var onum = osnapshot.val();
+    if(onum == "0" || onum == null){document.getElementById("overall").innerHTML = ("Overall : No Review")}
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall_x")).then((osnapshot) =>
+        {
+        document.getElementById("overall").innerHTML = ("Overall : "+(onum/osnapshot.val()).toFixed(2)+"/5")
+        });
+      }
+    });
+
+  //checking if user already rated
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/looks")).then((snapshot) => {
+  if(snapshot.val() != null){
+    looks(snapshot.val());
+    howmuch_looks_ed = snapshot.val();
+
+  }
+  });
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/trust")).then((snapshot) => {
+  if(snapshot.val() != null){
+    trust(snapshot.val());
+    howmuch_trust_ed = snapshot.val();
+  }
+  });
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/friend")).then((snapshot) => {
+  if(snapshot.val() != null){
+    friend(snapshot.val());
+    howmuch_friend_ed = snapshot.val();
+  }
+  });
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/pet")).then((snapshot) => {
+  if(snapshot.val() != null){
+    pet(snapshot.val());
+    howmuch_pet_ed = snapshot.val();
+  }
+  });
+  get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/overall")).then((snapshot) => {
+  if(snapshot.val() != null){
+    overall(snapshot.val());
+    howmuch_overall_ed = snapshot.val();
+  }
+  });
+
+
+  function looks(num){
+    console.log(num+" stars");
+    if(num == 1){
+      document.getElementById("l1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l2"). className = "fa fa-star fa-2x";
+      document.getElementById("l3"). className = "fa fa-star fa-2x";
+      document.getElementById("l4"). className = "fa fa-star fa-2x";
+      document.getElementById("l5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 2){
+      document.getElementById("l1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l3"). className = "fa fa-star fa-2x";
+      document.getElementById("l4"). className = "fa fa-star fa-2x";
+      document.getElementById("l5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 3){
+      document.getElementById("l1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l4"). className = "fa fa-star fa-2x";
+      document.getElementById("l5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 4){
+      document.getElementById("l1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 5){
+      document.getElementById("l1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("l5"). className = "fa fa-star checked fa-2x";
+    }
+  }
+  function trust(num){
+    console.log(num+" stars");
+    if(num == 1){
+      document.getElementById("t1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t2"). className = "fa fa-star fa-2x";
+      document.getElementById("t3"). className = "fa fa-star fa-2x";
+      document.getElementById("t4"). className = "fa fa-star fa-2x";
+      document.getElementById("t5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 2){
+      document.getElementById("t1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t3"). className = "fa fa-star fa-2x";
+      document.getElementById("t4"). className = "fa fa-star fa-2x";
+      document.getElementById("t5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 3){
+      document.getElementById("t1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t4"). className = "fa fa-star fa-2x";
+      document.getElementById("t5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 4){
+      document.getElementById("t1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 5){
+      document.getElementById("t1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("t5"). className = "fa fa-star checked fa-2x";
+    }
+  }
+  function friend(num){
+    console.log(num+" stars");
+    if(num == 1){
+      document.getElementById("f1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f2"). className = "fa fa-star fa-2x";
+      document.getElementById("f3"). className = "fa fa-star fa-2x";
+      document.getElementById("f4"). className = "fa fa-star fa-2x";
+      document.getElementById("f5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 2){
+      document.getElementById("f1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f3"). className = "fa fa-star fa-2x";
+      document.getElementById("f4"). className = "fa fa-star fa-2x";
+      document.getElementById("f5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 3){
+      document.getElementById("f1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f4"). className = "fa fa-star fa-2x";
+      document.getElementById("f5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 4){
+      document.getElementById("f1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 5){
+      document.getElementById("f1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("f5"). className = "fa fa-star checked fa-2x";
+    }
+  }
+  function pet(num){
+    console.log(num+" stars");
+    if(num == 1){
+      document.getElementById("p1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p2"). className = "fa fa-star fa-2x";
+      document.getElementById("p3"). className = "fa fa-star fa-2x";
+      document.getElementById("p4"). className = "fa fa-star fa-2x";
+      document.getElementById("p5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 2){
+      document.getElementById("p1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p3"). className = "fa fa-star fa-2x";
+      document.getElementById("p4"). className = "fa fa-star fa-2x";
+      document.getElementById("p5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 3){
+      document.getElementById("p1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p4"). className = "fa fa-star fa-2x";
+      document.getElementById("p5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 4){
+      document.getElementById("p1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 5){
+      document.getElementById("p1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("p5"). className = "fa fa-star checked fa-2x";
+    }
+  }
+  function overall(num){
+    console.log(num+" stars");
+    if(num == 1){
+      document.getElementById("o1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o2"). className = "fa fa-star fa-2x";
+      document.getElementById("o3"). className = "fa fa-star fa-2x";
+      document.getElementById("o4"). className = "fa fa-star fa-2x";
+      document.getElementById("o5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 2){
+      document.getElementById("o1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o3"). className = "fa fa-star fa-2x";
+      document.getElementById("o4"). className = "fa fa-star fa-2x";
+      document.getElementById("o5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 3){
+      document.getElementById("o1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o4"). className = "fa fa-star fa-2x";
+      document.getElementById("o5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 4){
+      document.getElementById("o1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o5"). className = "fa fa-star fa-2x";
+    }
+    else if(num == 5){
+      document.getElementById("o1"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o2"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o3"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o4"). className = "fa fa-star checked fa-2x";
+      document.getElementById("o5"). className = "fa fa-star checked fa-2x";
+    }
+  }
+  var L = 0;
+    document.getElementById("l1").onclick = function(){looks(1);
+      L = 1;
+    };
+    document.getElementById("l2").onclick = function(){looks(2);
+      L = 2;
+    };
+    document.getElementById("l3").onclick = function(){looks(3);
+      L = 3;
+    };
+    document.getElementById("l4").onclick = function(){looks(4);
+      L = 4;
+    };
+    document.getElementById("l5").onclick = function(){looks(5);
+      L = 5;
+    };
+  var T = 0;
+    document.getElementById("t1").onclick = function(){trust(1);
+      T = 1;
+    };
+    document.getElementById("t2").onclick = function(){trust(2);
+      T = 2;
+    };
+    document.getElementById("t3").onclick = function(){trust(3);
+      T = 3;
+    };
+    document.getElementById("t4").onclick = function(){trust(4);
+      T = 4;
+    };
+    document.getElementById("t5").onclick = function(){trust(5);
+      T = 5;
+    };
+  var F = 0;
+    document.getElementById("f1").onclick = function(){friend(1);
+      F = 1;
+    };
+    document.getElementById("f2").onclick = function(){friend(2);
+      F = 2;
+    };
+    document.getElementById("f3").onclick = function(){friend(3);
+      F = 3;
+    };
+    document.getElementById("f4").onclick = function(){friend(4);
+      F = 4;
+    };
+    document.getElementById("f5").onclick = function(){friend(5);
+      F = 5;
+    };
+  var P = 0;
+    document.getElementById("p1").onclick = function(){pet(1);
+      P = 1;
+    };
+    document.getElementById("p2").onclick = function(){pet(2);
+      P = 2;
+    };
+    document.getElementById("p3").onclick = function(){pet(3);
+      P = 3;
+    };
+    document.getElementById("p4").onclick = function(){pet(4);
+      P = 4;
+    };
+    document.getElementById("p5").onclick = function(){pet(5);
+      P = 5;
+    };
+  var O = 0;
+    document.getElementById("o1").onclick = function(){overall(1);
+      O = 1;
+    };
+    document.getElementById("o2").onclick = function(){overall(2);
+      O = 2;
+    };
+    document.getElementById("o3").onclick = function(){overall(3);
+      O = 3;
+    };
+    document.getElementById("o4").onclick = function(){overall(4);
+      O = 4;
+    };
+    document.getElementById("o5").onclick = function(){overall(5);
+      O = 5;
+    };
+
+  document.getElementById("savefuck").onclick = function(){
+    if (L!=0){
+      if(howmuch_looks_ed==0){
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks"),(snapshot.val()+L));
+      });
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks_x")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks_x"),(snapshot.val()+1));
+      });
+    }
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Looks"),(snapshot.val()+L-howmuch_looks_ed));
+      });
+    };
+    set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/looks"),(L));
+    };
+
+    if (T!=0){
+      if(howmuch_trust_ed==0){
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy"),(snapshot.val()+T));
+      });
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy_x")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy_x"),(snapshot.val()+1));
+      });
+    }
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/TrustWorthy"),(snapshot.val()+T-howmuch_trust_ed));
+      });
+    };
+    set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/trust"),(T));
+    };
+    if (F!=0){
+      if(howmuch_friend_ed==0){
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly"),(snapshot.val()+F));
+      });
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly_x")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly_x"),(snapshot.val()+1));
+      });
+    }
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Friendly"),(snapshot.val()+F-howmuch_friend_ed));
+      });
+    };
+      set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/friend"),(F));
+    };
+    if (P!=0){
+      if(howmuch_pet_ed==0){
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet"),(snapshot.val()+P));
+      });
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet_x")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet_x"),(snapshot.val()+1));
+      });
+    }
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Teachers_pet"),(snapshot.val()+P-howmuch_pet_ed));
+      });
+    };
+      set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/pet"),(P));
+    };
+    if (O!=0){
+      if(howmuch_overall_ed==0){
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall"),(snapshot.val()+O));
+      });
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall_x")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall_x"),(snapshot.val()+1));
+      });
+    }
+    else{
+      get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall")).then((snapshot) => {
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall"),(snapshot.val()+O-howmuch_pet_ed));
+      });
+    };
+      set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/overall"),(O));
+    }
+  }
+</script>
+</body>
+</html>
