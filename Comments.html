@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="shortcut icon" href="ico.png">
+    <title>Comments</title>
+	<style>
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+</style>
+
+  </head>
+  <body style="background-color: #5F4DEE">
+  	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #7464f0 ;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; font-color:red !important">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1 style="color:white !important;">XI Home Page</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="main.html"><b>Community Chat</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Arena_main.html"><b>Arena</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Comments</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Profile.html"><b>Profile</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" href="Events.html"><b>Events</b></a>
+        </li><hr style="color:white">
+        <li class="nav-item">
+          <a class="nav-link" id="logout"><b>Log Out</b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+  <br>
+  <br>
+  <br>
+	<div class="mt-4 p-5 rounded" style="background-color: white">
+		<div class="accordion"id="accordionExample">
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="headingOne">
+			  <button class="accordion-button" id="Vishwash" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				<b> ./Vishwash </b>
+			  </button>
+			</h2>
+			<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Vishwash">Looks : -</h4></center>
+					<center><h4 id="trust-Vishwash">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Vishwash">Friendly : -</h4></center>
+					<center><h4 id="pet-Vishwash">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Vishwash">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" onclick="RateTheF('Vishwash')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Vishwash" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Vishwash_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item" >
+			<h2 class="accordion-header" id="headingTwo">
+			  <button class="accordion-button" id="Gaurav" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				<b> Gaurav </b>
+			  </button>
+			</h2>
+			<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Gaurav">Looks : -</h4></center>
+					<center><h4 id="trust-Gaurav">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Gaurav">Friendly : -</h4></center>
+					<center><h4 id="pet-Gaurav">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Gaurav">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Gaurav')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Gaurav" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Gaurav_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="headingThree">
+			  <button class="accordion-button" id="Ritika" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				<b> Ritika </b>
+			  </button>
+			</h2>
+			<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Ritika">Looks : -</h4></center>
+					<center><h4 id="trust-Ritika">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Ritika">Friendly : -</h4></center>
+					<center><h4 id="pet-Ritika">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Ritika">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Ritika')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Ritika" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Ritika_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingFour">
+			  <button class="accordion-button" id="Prakash" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+				<b> Prakash </b>
+			  </button>
+			</h2>
+			<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Prakash">Looks : -</h4></center>
+					<center><h4 id="trust-Prakash">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Prakash">Friendly : -</h4></center>
+					<center><h4 id="pet-Prakash">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Prakash">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Prakash')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Prakash" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Prakash_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingFive">
+			  <button class="accordion-button" id="Prateek" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+				<b> Prateek </b>
+			  </button>
+			</h2>
+			<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Prateek">Looks : -</h4></center>
+					<center><h4 id="trust-Prateek">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Prateek">Friendly : -</h4></center>
+					<center><h4 id="pet-Prateek">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Prateek">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Prateek')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Prateek" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Prateek_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingSix">
+			  <button class="accordion-button" id="Abhinav" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+				<b> Abhinav </b>
+			  </button>
+			</h2>
+			<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Abhinav">Looks : -</h4></center>
+					<center><h4 id="trust-Abhinav">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Abhinav">Friendly : -</h4></center>
+					<center><h4 id="pet-Abhinav">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Abhinav">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Abhinav')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Abhinav" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Abhinav_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingSeven">
+			  <button class="accordion-button" id="Shalini" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+				<b> Shalini </b>
+			  </button>
+			</h2>
+			<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shalini">Looks : -</h4></center>
+					<center><h4 id="trust-Shalini">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shalini">Friendly : -</h4></center>
+					<center><h4 id="pet-Shalini">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shalini">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shalini')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shalini" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shalini_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingEight">
+			  <button class="accordion-button" id="Vivek" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+				<b> Vivek </b>
+			  </button>
+			</h2>
+			<div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Vivek">Looks : -</h4></center>
+					<center><h4 id="trust-Vivek">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Vivek">Friendly : -</h4></center>
+					<center><h4 id="pet-Vivek">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Vivek">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Vivek')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Vivek" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Vivek_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingNine">
+			  <button class="accordion-button" id="Amisha" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+				<b> Amisha </b>
+			  </button>
+			</h2>
+			<div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Amisha">Looks : -</h4></center>
+					<center><h4 id="trust-Amisha">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Amisha">Friendly : -</h4></center>
+					<center><h4 id="pet-Amisha">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Amisha">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Amisha')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Amisha" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Amisha_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingTen">
+			  <button class="accordion-button" id="Vanshika" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+				<b> Vanshika </b>
+			  </button>
+			</h2>
+			<div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Vanshika">Looks : -</h4></center>
+					<center><h4 id="trust-Vanshika">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Vanshika">Friendly : -</h4></center>
+					<center><h4 id="pet-Vanshika">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Vanshika">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Vanshika')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Vanshika" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Vanshika_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingEleven">
+			  <button class="accordion-button" id="Utkarsh" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+				<b> Utkarsh </b>
+			  </button>
+			</h2>
+			<div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Utkarsh">Looks : -</h4></center>
+					<center><h4 id="trust-Utkarsh">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Utkarsh">Friendly : -</h4></center>
+					<center><h4 id="pet-Utkarsh">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Utkarsh">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Utkarsh')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Utkarsh" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Utkarsh_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingTwelve">
+			  <button class="accordion-button" id="Yashwardhan" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+				<b> Yashwardhan </b>
+			  </button>
+			</h2>
+			<div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Yashwardhan">Looks : -</h4></center>
+					<center><h4 id="trust-Yashwardhan">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Yashwardhan">Friendly : -</h4></center>
+					<center><h4 id="pet-Yashwardhan">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Yashwardhan">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Yashwardhan')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Yashwardhan" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Yashwardhan_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingThirteen">
+			  <button class="accordion-button" id="Muskan" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+				<b> Muskan </b>
+			  </button>
+			</h2>
+			<div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Muskan">Looks : -</h4></center>
+					<center><h4 id="trust-Muskan">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Muskan">Friendly : -</h4></center>
+					<center><h4 id="pet-Muskan">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Muskan">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Muskan')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Muskan" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Muskan_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingForteen">
+			  <button class="accordion-button" id="Ritik" data-bs-toggle="collapse" data-bs-target="#collapseForteen" aria-expanded="false" aria-controls="collapseForteen">
+				<b> Ritik </b>
+			  </button>
+			</h2>
+			<div id="collapseForteen" class="accordion-collapse collapse" aria-labelledby="headingForteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Ritik">Looks : -</h4></center>
+					<center><h4 id="trust-Ritik">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Ritik">Friendly : -</h4></center>
+					<center><h4 id="pet-Ritik">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Ritik">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Ritik')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Ritik" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Ritik_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingfifteen">
+			  <button class="accordion-button" id="Prafull" data-bs-toggle="collapse" data-bs-target="#collapsefifteen" aria-expanded="false" aria-controls="collapsefifteen">
+				<b> Prafull </b>
+			  </button>
+			</h2>
+			<div id="collapsefifteen" class="accordion-collapse collapse" aria-labelledby="headingfifteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Prafull">Looks : -</h4></center>
+					<center><h4 id="trust-Prafull">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Prafull">Friendly : -</h4></center>
+					<center><h4 id="pet-Prafull">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Prafull">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Prafull')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Prafull" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Prafull_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingSixteen">
+			  <button class="accordion-button" id="Deepak" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+				<b> Deepak </b>
+			  </button>
+			</h2>
+			<div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Deepak">Looks : -</h4></center>
+					<center><h4 id="trust-Deepak">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Deepak">Friendly : -</h4></center>
+					<center><h4 id="pet-Deepak">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Deepak">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Deepak')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Deepak" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Deepak_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingSeventeen">
+			  <button class="accordion-button" id="Abhay" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+				<b> Abhay </b>
+			  </button>
+			</h2>
+			<div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Abhay">Looks : -</h4></center>
+					<center><h4 id="trust-Abhay">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Abhay">Friendly : -</h4></center>
+					<center><h4 id="pet-Abhay">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Abhay">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Abhay')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Abhay" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Abhay_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingEighteen">
+			  <button class="accordion-button" id="Prabhanshu" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+				<b> Prabhanshu </b>
+			  </button>
+			</h2>
+			<div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Prabhanshu">Looks : -</h4></center>
+					<center><h4 id="trust-Prabhanshu">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Prabhanshu">Friendly : -</h4></center>
+					<center><h4 id="pet-Prabhanshu">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Prabhanshu">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Prabhanshu')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Prabhanshu" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Prabhanshu_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingNineteen">
+			  <button class="accordion-button" id="Aishani" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+				<b> Aishani </b>
+			  </button>
+			</h2>
+			<div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Aishani">Looks : -</h4></center>
+					<center><h4 id="trust-Aishani">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Aishani">Friendly : -</h4></center>
+					<center><h4 id="pet-Aishani">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Aishani">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Aishani')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Aishani" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Aishani_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  			<h2 class="accordion-header" id="headingTwenty">
+			  <button class="accordion-button" id="Puja" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+				<b> Puja </b>
+			  </button>
+			</h2>
+			<div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Puja">Looks : -</h4></center>
+					<center><h4 id="trust-Puja">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Puja">Friendly : -</h4></center>
+					<center><h4 id="pet-Puja">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Puja">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Puja')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Puja" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Puja_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentyone">
+			  <button class="accordion-button" id="Shishir" data-bs-toggle="collapse" data-bs-target="#collapseTwentyone" aria-expanded="false" aria-controls="collapseTwentyone">
+				<b> Shishir </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentyone" class="accordion-collapse collapse" aria-labelledby="headingTwentyone" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shishir">Looks : -</h4></center>
+					<center><h4 id="trust-Shishir">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shishir">Friendly : -</h4></center>
+					<center><h4 id="pet-Shishir">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shishir">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shishir')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shishir" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shishir_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentytwo">
+			  <button class="accordion-button" id="Aksa" data-bs-toggle="collapse" data-bs-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
+				<b> Aksa </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentytwo" class="accordion-collapse collapse" aria-labelledby="headingTwentytwo" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Aksa">Looks : -</h4></center>
+					<center><h4 id="trust-Aksa">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Aksa">Friendly : -</h4></center>
+					<center><h4 id="pet-Aksa">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Aksa">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Aksa')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Aksa" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Aksa_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentythree">
+			  <button class="accordion-button" id="Astha" data-bs-toggle="collapse" data-bs-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+				<b> Astha </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentythree" class="accordion-collapse collapse" aria-labelledby="headingTwentythree" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Astha">Looks : -</h4></center>
+					<center><h4 id="trust-Astha">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Astha">Friendly : -</h4></center>
+					<center><h4 id="pet-Astha">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Astha">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Astha')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Astha" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Astha_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentyfour">
+			  <button class="accordion-button" id="Shreya" data-bs-toggle="collapse" data-bs-target="#collapseTwentyfour" aria-expanded="false" aria-controls="collapseTwentyfour">
+				<b> Shreya </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="headingTwentyfour" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shreya">Looks : -</h4></center>
+					<center><h4 id="trust-Shreya">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shreya">Friendly : -</h4></center>
+					<center><h4 id="pet-Shreya">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shreya">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shreya')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shreya" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shreya_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentyfive">
+			  <button class="accordion-button" id="Shudhanshu" data-bs-toggle="collapse" data-bs-target="#collapseTwentyfive" aria-expanded="false" aria-controls="collapseTwentyfive">
+				<b> Shudhanshu </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentyfive" class="accordion-collapse collapse" aria-labelledby="headingTwentyfive" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shudhanshu">Looks : -</h4></center>
+					<center><h4 id="trust-Shudhanshu">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shudhanshu">Friendly : -</h4></center>
+					<center><h4 id="pet-Shudhanshu">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shudhanshu">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shudhanshu')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shudhanshu" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shudhanshu_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentysix">
+			  <button class="accordion-button" id="Vikas" data-bs-toggle="collapse" data-bs-target="#collapseTwentysix" aria-expanded="false" aria-controls="collapseTwentysix">
+				<b> Vikas </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentysix" class="accordion-collapse collapse" aria-labelledby="headingTwentysix" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Vikas">Looks : -</h4></center>
+					<center><h4 id="trust-Vikas">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Vikas">Friendly : -</h4></center>
+					<center><h4 id="pet-Vikas">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Vikas">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Vikas')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Vikas" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Vikas_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentyseven">
+			  <button class="accordion-button" id="Shaily" data-bs-toggle="collapse" data-bs-target="#collapseTwentyseven" aria-expanded="false" aria-controls="collapseTwentyseven">
+				<b> Shaily </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentyseven" class="accordion-collapse collapse" aria-labelledby="headingTwentyseven" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shaily">Looks : -</h4></center>
+					<center><h4 id="trust-Shaily">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shaily">Friendly : -</h4></center>
+					<center><h4 id="pet-Shaily">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shaily">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shaily')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shaily" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shaily_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentyeight">
+			  <button class="accordion-button" id="Ghanshyam" data-bs-toggle="collapse" data-bs-target="#collapseTwentyeight" aria-expanded="false" aria-controls="collapseTwentyeight">
+				<b> Ghanshyam </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentyeight" class="accordion-collapse collapse" aria-labelledby="headingTwentyeight" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Ghanshyam">Looks : -</h4></center>
+					<center><h4 id="trust-Ghanshyam">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Ghanshyam">Friendly : -</h4></center>
+					<center><h4 id="pet-Ghanshyam">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Ghanshyam">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Ghanshyam')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Ghanshyam" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Ghanshyam_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingTwentynine">
+			  <button class="accordion-button" id="Akshaj" data-bs-toggle="collapse" data-bs-target="#collapseTwentynine" aria-expanded="false" aria-controls="collapseTwentynine">
+				<b> Akshaj </b>
+			  </button>
+			</h2>
+			<div id="collapseTwentynine" class="accordion-collapse collapse" aria-labelledby="headingTwentynine" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Akshaj">Looks : -</h4></center>
+					<center><h4 id="trust-Akshaj">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Akshaj">Friendly : -</h4></center>
+					<center><h4 id="pet-Akshaj">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Akshaj">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Akshaj')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Akshaj" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Akshaj_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingThirty">
+			  <button class="accordion-button" id="Aakash" data-bs-toggle="collapse" data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+				<b> Aakash </b>
+			  </button>
+			</h2>
+			<div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Aakash">Looks : -</h4></center>
+					<center><h4 id="trust-Aakash">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Aakash">Friendly : -</h4></center>
+					<center><h4 id="pet-Aakash">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Aakash">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Aakash')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Aakash" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Aakash_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingThirtyone">
+			  <button class="accordion-button" id="Achman" data-bs-toggle="collapse" data-bs-target="#collapseThirtyone" aria-expanded="false" aria-controls="collapseThirtyone">
+				<b> Achman </b>
+			  </button>
+			</h2>
+			<div id="collapseThirtyone" class="accordion-collapse collapse" aria-labelledby="headingThirtyone" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Achman">Looks : -</h4></center>
+					<center><h4 id="trust-Achman">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Achman">Friendly : -</h4></center>
+					<center><h4 id="pet-Achman">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Achman">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Achman')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Achman" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Achman_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingThirtytwo">
+			  <button class="accordion-button" id="Uday" data-bs-toggle="collapse" data-bs-target="#collapseThirtytwo" aria-expanded="false" aria-controls="collapseThirtytwo">
+				<b> Uday </b>
+			  </button>
+			</h2>
+			<div id="collapseThirtytwo" class="accordion-collapse collapse" aria-labelledby="headingThirtytwo" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Uday">Looks : -</h4></center>
+					<center><h4 id="trust-Uday">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Uday">Friendly : -</h4></center>
+					<center><h4 id="pet-Uday">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Uday">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Uday')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Uday" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Uday_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingThirtythree">
+			  <button class="accordion-button" id="Pragya" data-bs-toggle="collapse" data-bs-target="#collapseThirtythree" aria-expanded="false" aria-controls="collapseThirtythree">
+				<b> Pragya </b>
+			  </button>
+			</h2>
+			<div id="collapseThirtythree" class="accordion-collapse collapse" aria-labelledby="headingThirtythree" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Pragya">Looks : -</h4></center>
+					<center><h4 id="trust-Pragya">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Pragya">Friendly : -</h4></center>
+					<center><h4 id="pet-Pragya">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Pragya">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Pragya')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Pragya" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Pragya_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  		  			<h2 class="accordion-header" id="headingThirtyfour">
+			  <button class="accordion-button" id="Shruti" data-bs-toggle="collapse" data-bs-target="#collapseThirtyfour" aria-expanded="false" aria-controls="collapseThirtyfour">
+				<b> Shruti </b>
+			  </button>
+			</h2>
+			<div id="collapseThirtyfour" class="accordion-collapse collapse" aria-labelledby="headingThirtyfour" data-bs-parent="#accordionExample">
+			  <div class="accordion-body">
+					<center><h4 id="looks-Shruti">Looks : -</h4></center>
+					<center><h4 id="trust-Shruti">TrustWorthy : -</h4></center>
+					<center><h4 id="friend-Shruti">Friendly : -</h4></center>
+					<center><h4 id="pet-Shruti">Teachers Pet : -</h4></center>
+					<center><h4 id="overall-Shruti">Overall : -</h4></center>
+					<div class="d-grid gap-2"><button class="btn btn-outline-primary" type="button" onclick="RateTheF('Shruti')"><b>Rate</b></button></div><hr>
+				<div class="card">
+				  <div class="card-body">
+					<h6 class="card-title text-muted">Comment :</h6>
+					<b><textarea id="comments-Shruti" placeholder="Just a Sec."></textarea></b>
+					<div class="d-grid gap-2"><button class="btn btn-danger" id="cmt_Shruti_save"><b>Save</b></button></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+		  </div>
+		  <div class="accordion-item">
+		  </div>
+		  <div class="accordion-item">
+		  </div>
+		  <div class="accordion-item">
+		  </div>
+		</div>
+
+
+
+
+
+	</div>
+  </div>
+
+
+  <div class="modal fade" id="messagesentMain" tabindex="-1" aria-labelledby="messagesent" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="messagesent">Nice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Comment saved 👍
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script type="module">
+	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+	  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+	  const firebaseConfig = {
+		apiKey: "AIzaSyCLhgz6eHJz1h75UCzJBLpKXG3ej0m8Hpc",
+		authDomain: "meme-arena-x.firebaseapp.com",
+		databaseURL: "https://meme-arena-x-default-rtdb.asia-southeast1.firebasedatabase.app",
+		projectId: "meme-arena-x",
+		storageBucket: "meme-arena-x.appspot.com",
+		messagingSenderId: "1065864797805",
+		appId: "1:1065864797805:web:348583a22f09f1d2f5a964",
+		measurementId: "G-5QW7K75VEE"
+	  };
+	  const app = initializeApp(firebaseConfig);
+	  const analytics = getAnalytics(app);
+	  import {getDatabase, ref, get, set}
+	  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+	  const db = getDatabase();
+	  ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/cmts");
+
+	  	document.getElementById("logout").onclick = function(){	localStorage.removeItem("UsEr_Name_MemEArIna_UsEr_ApS2");
+	window.location.replace("index.html");};
+
+	  Code("Vishwash");
+	  document.getElementById("Gaurav").onclick = function(){Code("Gaurav")};
+	  document.getElementById("Ritika").onclick = function(){Code("Ritika")};
+	  document.getElementById("Prakash").onclick = function(){Code("Prakash")};
+	  document.getElementById("Prateek").onclick = function(){Code("Prateek")};
+	  document.getElementById("Abhinav").onclick = function(){Code("Abhinav")};
+	  document.getElementById("Shalini").onclick = function(){Code("Shalini")};
+	  document.getElementById("Vivek").onclick = function(){Code("Vivek")};
+	  document.getElementById("Amisha").onclick = function(){Code("Amisha")};
+	  document.getElementById("Vanshika").onclick = function(){Code("Vanshika")};
+	  document.getElementById("Utkarsh").onclick = function(){Code("Utkarsh")};
+	  document.getElementById("Yashwardhan").onclick = function(){Code("Yashwardhan")};
+	  document.getElementById("Muskan").onclick = function(){Code("Muskan")};
+	  document.getElementById("Ritik").onclick = function(){Code("Ritik")};
+	  document.getElementById("Prafull").onclick = function(){Code("Prafull")};
+	  document.getElementById("Deepak").onclick = function(){Code("Deepak")};
+	  document.getElementById("Abhay").onclick = function(){Code("Abhay")};
+	  document.getElementById("Prabhanshu").onclick = function(){Code("Prabhanshu")};
+	  document.getElementById("Aishani").onclick = function(){Code("Aishani")};
+	  document.getElementById("Puja").onclick = function(){Code("Puja")};
+	  document.getElementById("Shishir").onclick = function(){Code("Shishir")};
+	  document.getElementById("Aksa").onclick = function(){Code("Aksa")};
+	  document.getElementById("Astha").onclick = function(){Code("Astha")};
+	  document.getElementById("Shreya").onclick = function(){Code("Shreya")};
+	  document.getElementById("Shudhanshu").onclick = function(){Code("Shudhanshu")};
+	  document.getElementById("Vikas").onclick = function(){Code("Vikas")};
+	  document.getElementById("Shaily").onclick = function(){Code("Shaily")};
+	  document.getElementById("Ghanshyam").onclick = function(){Code("Ghanshyam")};
+	  document.getElementById("Akshaj").onclick = function(){Code("Akshaj")};
+	  document.getElementById("Aakash").onclick = function(){Code("Aakash")};
+	  document.getElementById("Achman").onclick = function(){Code("Achman")};
+	  document.getElementById("Uday").onclick = function(){Code("Uday")};
+	  document.getElementById("Pragya").onclick = function(){Code("Pragya")};
+	  document.getElementById("Shruti").onclick = function(){Code("Shruti")};
+	  function Code(name)
+	  {
+		//looks
+		get(ref(db, "USR_LST/" + name + "/Looks")).then((lsnapshot) =>
+			{
+			var lnum = lsnapshot.val();
+			if(lnum == "0" || lnum == null){document.getElementById("looks-"+name).innerHTML = ("Looks : No Review")}
+			else{
+				get(ref(db, "USR_LST/" + name + "/Looks_x")).then((lsnapshot) =>
+					{
+						document.getElementById("looks-"+name).innerHTML = ("Looks : "+(lnum/lsnapshot.val()).toFixed(2)+"/5")
+					});
+				}
+			});
+
+		//Trust
+	  get(ref(db, "USR_LST/" + name + "/TrustWorthy")).then((tsnapshot) => {
+		var tnum = tsnapshot.val();
+		if(tnum == "0" || tnum == null){document.getElementById("trust-"+name).innerHTML = ("TrustWorthy : No Review")}
+		else{
+			get(ref(db, "USR_LST/" + name + "/TrustWorthy_x")).then((tsnapshot) =>
+				{
+				document.getElementById("trust-"+name).innerHTML = ("TrustWorthy : "+(tnum/tsnapshot.val()).toFixed(2)+"/5")
+				});
+			}
+		});
+
+	//Friend
+	  get(ref(db, "USR_LST/" + name + "/Friendly")).then((fsnapshot) => {
+		var fnum = fsnapshot.val();
+		if(fnum == "0" || fnum == null){document.getElementById("friend-"+name).innerHTML = ("Friendly : No Review")}
+		else{
+			get(ref(db, "USR_LST/" + name + "/Friendly_x")).then((fsnapshot) =>
+				{
+				document.getElementById("friend-"+name).innerHTML = ("Friendly : "+(fnum/fsnapshot.val()).toFixed(2)+"/5")
+				});
+			}
+		});
+
+	//Pet
+	  get(ref(db, "USR_LST/" + name + "/Teachers_pet")).then((psnapshot) => {
+		var pnum = psnapshot.val();
+		if(pnum == "0" || pnum == null){document.getElementById("pet-"+name).innerHTML = ("Teachers Pet : No Review")}
+		else{
+			get(ref(db, "USR_LST/" + name + "/Teachers_pet_x")).then((psnapshot) =>
+				{
+				document.getElementById("pet-"+name).innerHTML = ("Teachers Pet : "+(pnum/psnapshot.val()).toFixed(2)+"/5")
+				});
+			}
+		});
+
+	//Overall
+	  get(ref(db, "USR_LST/" + name + "/Overall")).then((osnapshot) => {
+		var onum = osnapshot.val();
+		if(onum == "0" || onum == null){document.getElementById("overall-"+name).innerHTML = ("Overall : No Review")}
+		else{
+			get(ref(db, "USR_LST/" + name + "/Overall_x")).then((osnapshot) =>
+				{
+				document.getElementById("overall-"+name).innerHTML = ("Overall : "+(onum/osnapshot.val()).toFixed(2)+"/5")
+				});
+			}
+		});
+
+	//Comments
+	  get(ref(db, "USR_LST/" + name + "/cmts")).then((cmtsnapshot) => {
+		document.getElementById("comments-"+name).value = cmtsnapshot.val();
+		});
+	  }
+
+	function cmtsave(save_name)
+	{	if(document.getElementById("comments-"+save_name).value != ""){
+			set(ref(db,"USR_LST/"+save_name+"/cmts"),(document.getElementById("comments-"+save_name).value));
+      var myModal = new bootstrap.Modal(document.getElementById("messagesentMain"));
+      myModal.show()
+		}
+	}
+
+	document.getElementById("cmt_Vishwash_save").onclick = function(){cmtsave("Vishwash")};
+	document.getElementById("cmt_Gaurav_save").onclick = function(){cmtsave("Gaurav")};
+	document.getElementById("cmt_Ritika_save").onclick = function(){cmtsave("Ritika")};
+	document.getElementById("cmt_Prakash_save").onclick = function(){cmtsave("Prakash")};
+	document.getElementById("cmt_Prateek_save").onclick = function(){cmtsave("Prateek")};
+	document.getElementById("cmt_Abhinav_save").onclick = function(){cmtsave("Abhinav")};
+	document.getElementById("cmt_Shalini_save").onclick = function(){cmtsave("Shalini")};
+	document.getElementById("cmt_Vivek_save").onclick = function(){cmtsave("Vivek")};
+	document.getElementById("cmt_Amisha_save").onclick = function(){cmtsave("Amisha")};
+	document.getElementById("cmt_Vanshika_save").onclick = function(){cmtsave("Vanshika")};
+	document.getElementById("cmt_Utkarsh_save").onclick = function(){cmtsave("Utkarsh")};
+	document.getElementById("cmt_Yashwardhan_save").onclick = function(){cmtsave("Yashwardhan")};
+	document.getElementById("cmt_Muskan_save").onclick = function(){cmtsave("Muskan")};
+	document.getElementById("cmt_Ritik_save").onclick = function(){cmtsave("Ritik")};
+	document.getElementById("cmt_Prafull_save").onclick = function(){cmtsave("Prafull")};
+	document.getElementById("cmt_Deepak_save").onclick = function(){cmtsave("Deepak")};
+	document.getElementById("cmt_Abhay_save").onclick = function(){cmtsave("Abhay")};
+	document.getElementById("cmt_Prabhanshu_save").onclick = function(){cmtsave("Prabhanshu")};
+	document.getElementById("cmt_Aishani_save").onclick = function(){cmtsave("Aishani")};
+	document.getElementById("cmt_Puja_save").onclick = function(){cmtsave("Puja")};
+	document.getElementById("cmt_Shishir_save").onclick = function(){cmtsave("Shishir")};
+	document.getElementById("cmt_Aksa_save").onclick = function(){cmtsave("Aksa")};
+	document.getElementById("cmt_Astha_save").onclick = function(){cmtsave("Astha")};
+	document.getElementById("cmt_Shreya_save").onclick = function(){cmtsave("Shreya")};
+	document.getElementById("cmt_Shudhanshu_save").onclick = function(){cmtsave("Shudhanshu")};
+	document.getElementById("cmt_Vikas_save").onclick = function(){cmtsave("Vikas")};
+	document.getElementById("cmt_Shaily_save").onclick = function(){cmtsave("Shaily")};
+	document.getElementById("cmt_Ghanshyam_save").onclick = function(){cmtsave("Ghanshyam")};
+	document.getElementById("cmt_Akshaj_save").onclick = function(){cmtsave("Akshaj")};
+	document.getElementById("cmt_Aakash_save").onclick = function(){cmtsave("Aakash")};
+	document.getElementById("cmt_Achman_save").onclick = function(){cmtsave("Achman")};
+	document.getElementById("cmt_Uday_save").onclick = function(){cmtsave("Uday")};
+	document.getElementById("cmt_Pragya_save").onclick = function(){cmtsave("Pragya")};
+	document.getElementById("cmt_Shruti_save").onclick = function(){cmtsave("Shruti")};
+
+
+	</script>
+  <script type="text/javascript">
+
+    function RateTheF(nameN){
+      localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate = (nameN);
+      window.location.replace("toRate.html");
+    }
+  </script>
+	  <div class="modal fade" id="sorry" tabindex="-1" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Sorry! Under Cunstruction.</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				Working on it. Plzz wait till next update. But you can leave a comment on someones profile whithout reveling yourself.
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+	  </div>
+
+
+  </body>
+</html>
