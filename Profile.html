@@ -24,7 +24,7 @@
           <a class="nav-link" href="Arena_main.html"><b>Arena</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
-          <a class="nav-link" href="Comments.html"><b>Rating Tab</b></a>
+          <a class="nav-link" href="Comments.html"><b>Comments</b></a>
         </li><hr style="color:white">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"><b>Profile</b></a>
@@ -72,6 +72,9 @@
   <button class="btn btn-primary" type="button" id="Review"><b>Review Others Profiles</b></button><hr>
 </div>
 <hr><center><h3>Setting</h3></center><hr>
+<p><b>change your avtar :</b> <button class="btn btn-success" id="avchange">Change</button></p>
+
+<hr>
 <p><b> change color of name: <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Click here</a> select color and copy hex code(eg: #66ff33) and past it... or you can type basic colors like red blue etc.</b></p>
 <p><b id = "colorchangename"> - </b><input type="text" class="form-control" id="newcolor" placeholder="#66ff33 or orange"></input></p>
 <button class="btn btn-success" id="saveclr"><b>save</b></button><hr><hr>
@@ -183,6 +186,16 @@
     document.getElementById("saveclr").onclick = function(){
       localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color = document.getElementById("newcolor").value;
       document.getElementById("colorchangename").style = ("color:"+localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_Color);
+    };
+    document.getElementById("avchange").onclick = function(){
+      if(localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img[3] == "f"){
+        localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = "DP/f/"+Math.random().toString()[5]+".png"
+        document.getElementById("pp").src = localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img;
+      }
+      else{
+        localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img = "DP/m/"+Math.random().toString()[5]+".png"
+        document.getElementById("pp").src = localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_img;
+      }
     };
 
 	</script>
