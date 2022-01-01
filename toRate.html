@@ -618,7 +618,7 @@ window.location.replace("Comments.html");
     }
     else{
       get(ref(db, "USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall")).then((snapshot) => {
-          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall"),(snapshot.val()+O-howmuch_pet_ed));
+          set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate + "/Overall"),(snapshot.val()+O-howmuch_overall_ed));
       });
     };
       set(ref(db,"USR_LST/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2 + "/Rated/" + localStorage.UsEr_Name_MemEArIna_UsEr_ApS2_toRate +"/overall"),(O));
